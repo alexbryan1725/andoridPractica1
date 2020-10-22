@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:text="Registrarse" />
+
+
+            <EditText
+                android:id="@+id/TxtAddNombres"
+                style="@style/edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+
+                android:hint="Nombres"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/TxtAddClieApellidos"
+                style="@style/edit"
+
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:layout_marginBottom="10dp"
+
+                android:hint="Apellidos"
+                android:inputType="text"
+
+                />
+
+
+            <EditText
+                android:id="@+id/TxtAddClieTelefono"
+                style="@style/edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+
+                android:hint="Teléfono"
+                android:inputType="number"
+                android:maxLength="10"
+
+                />
+
+
+            <EditText
+                android:id="@+id/TxtAddClieCorreo"
+                style="@style/edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+
+
+                android:hint="E-mail"
+                android:inputType="textWebEmailAddress"
+
+                />
+
+            <EditText
+                android:id="@+id/TxtAddCliePswd"
+                style="@style/edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+
+
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+
+                />
+
+            <EditText
+                android:id="@+id/TxtAddCliePswd2"
+                style="@style/edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+
+
+                android:hint="Confirmar Contraseña"
+                android:inputType="textPassword"
+
+                />
+
+
+            <Button
+                android:onClick="reg"
+                android:id="@+id/BtnAdminSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btnsolid"
+                android:text="Guardar"
+                android:textColor="@android:color/white" />
+
+            <Button
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btnline"
+                android:text="Cancelar" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,76 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_margin="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ingrese Email"
-        />
-
-        <EditText
-
-            style="@style/txt"
-            android:id="@+id/txtEmail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:inputType="textWebEmailAddress"
-            android:hint="Nombre"/>
-
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingrese Contraseña"
-            />
-
-        <EditText
-            android:inputType="textPassword"
-            style="@style/txt"
-            android:id="@+id/txtPswd"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Contraseña"
-            />
-        <Switch
-
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Recordar Contraseña"/>
-
-        <Button
-            android:layout_marginTop="15dp"
-             android:onClick="save"
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Iniciar Sesión"/>
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese Email" />
 
-    </LinearLayout>
+            <EditText
+
+                android:id="@+id/txtEmail"
+                style="@style/txt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Nombre"
+                android:inputType="textWebEmailAddress" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese Contraseña" />
+
+            <EditText
+                android:id="@+id/txtPswd"
+                style="@style/txt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword" />
+
+            <Switch
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Recordar Contraseña" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="btnRelleno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnsolid"
+                android:onClick="save"
+                android:text="Iniciar Sesión"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnline"
+                android:onClick="register"
+                android:text="Registrarse" />
+
+
+        </LinearLayout>
 
     </ScrollView>
 

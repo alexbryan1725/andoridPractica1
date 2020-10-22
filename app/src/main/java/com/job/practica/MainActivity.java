@@ -3,6 +3,7 @@ package com.job.practica;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
         obEdit.putString("email",email.getText().toString());
         obEdit.putString("pswd",pswd.getText().toString());
         obEdit.commit();
+
+
+    }
+
+    public void register(View view){
+
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+
+
+
 
 
     }
