@@ -7,10 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#3DDC84"
     android:gravity="center">
-
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,40 +26,48 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingrese nombre"
+        android:text="Ingrese Email"
         />
 
         <EditText
 
             style="@style/txt"
-            android:id="@+id/txtName"
+            android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="text"
+            android:inputType="textWebEmailAddress"
             android:hint="Nombre"/>
 
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingrese Teléfono"
+            android:text="Ingrese Contraseña"
             />
 
         <EditText
-            android:inputType="number"
+            android:inputType="textPassword"
             style="@style/txt"
-            android:id="@+id/txtTel"
+            android:id="@+id/txtPswd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Teléfono"
+            android:hint="Contraseña"
             />
+        <Switch
+
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recordar Contraseña"/>
 
         <Button
+            android:layout_marginTop="15dp"
              android:onClick="save"
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guardar"/>
+            android:text="Iniciar Sesión"/>
+
 
 
     </LinearLayout>
