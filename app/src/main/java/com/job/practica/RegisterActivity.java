@@ -3,6 +3,7 @@ package com.job.practica;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -98,6 +99,16 @@ public class RegisterActivity extends AppCompatActivity {
 
             if( dataBaseCon.insertUser(user) ){
                 Toast.makeText(this,"Se agrego el usuario",Toast.LENGTH_SHORT).show();
+               int log = dataBaseCon.finder(correoGet,pswdGet);
+               if(log>0){
+                   Bundle extras = new Bundle();
+                   extras.putInt("idClie", log);
+                   Intent intent = new Intent(this, InfoActivity.class);
+                   intent.putExtras(extras);
+                   startActivity(intent);
+                   this.finish();
+               }
+
             }else {
                 Toast.makeText(this,"Se ha producido un error",Toast.LENGTH_SHORT).show();
             }
