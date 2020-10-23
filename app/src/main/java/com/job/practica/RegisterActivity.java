@@ -6,10 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.job.practica.Model.User;
 
 public class RegisterActivity extends AppCompatActivity {
 
     EditText   nombres, apellidos, telefono, correo, pswd,pswd2 ;
+    DataBaseCon dataBaseCon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
         pswd = (EditText) findViewById(R.id.TxtAddCliePswd);
         pswd2 = (EditText) findViewById(R.id.TxtAddCliePswd2);
 
+        dataBaseCon = new DataBaseCon(this);
 
     }
 
@@ -83,6 +88,20 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         if(isOk) {
+
+            User user = new User();
+            user.setNames(nombresGet);
+            user.setLastname(apellidosGet);
+            user.setEmail(correoGet);
+            user.setPswd(pswdGet);
+            user.setTelephone(telefonoGet);
+
+            if( dataBaseCon.insertUser(user) ){
+                Toast.makeText(this,"Se agrego el usuario",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this,"Se ha producido un error",Toast.LENGTH_SHORT).show();
+            }
+
 
         }else {
             return;

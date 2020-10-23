@@ -32,22 +32,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
-
                 android:hint="Nombres"
                 android:inputType="text" />
 
             <EditText
                 android:id="@+id/TxtAddClieApellidos"
                 style="@style/edit"
-
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-
                 android:layout_marginBottom="10dp"
-
                 android:hint="Apellidos"
                 android:inputType="text"
-
                 />
 
 
@@ -61,7 +56,6 @@
                 android:hint="Teléfono"
                 android:inputType="number"
                 android:maxLength="10"
-
                 />
 
 
@@ -71,11 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
-
-
                 android:hint="E-mail"
                 android:inputType="textWebEmailAddress"
-
                 />
 
             <EditText
@@ -84,11 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
-
-
                 android:hint="Contraseña"
                 android:inputType="textPassword"
-
                 />
 
             <EditText
@@ -97,27 +85,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
-
-
                 android:hint="Confirmar Contraseña"
                 android:inputType="textPassword"
-
                 />
 
 
             <Button
-                android:onClick="reg"
                 android:id="@+id/BtnAdminSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btnsolid"
+                android:onClick="reg"
                 android:text="Guardar"
                 android:textColor="@android:color/white" />
 
             <Button
-
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -126,8 +109,6 @@
 
 
         </LinearLayout>
-
-
     </ScrollView>
 
 
